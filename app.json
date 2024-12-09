@@ -1,5 +1,6 @@
 {
   "expo": {
+    "entryPoint": "./app/index.tsx",
     "name": "Barber_Shop",
     "slug": "Barber_Shop",
     "version": "1.0.0",

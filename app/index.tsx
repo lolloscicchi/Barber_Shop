@@ -1,37 +1,22 @@
-import { Image, ImageBackground, Text, TouchableOpacity, View } from 'react-native';
-import VerticalLogo from '@/components/molecules/verticalLogo/verticalLogo.molecule';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import * as React from 'react';
+import { registerRootComponent } from 'expo';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import OnBoard1 from '@/app/screens/onBoard1';
+import OnBoard from '@/app/screens/onBoard';
 
 export default function Index() {
+  const Stack = createNativeStackNavigator();
+
   return (
-    <SafeAreaProvider>
-      <ImageBackground
-        source={require('../assets/images/appImages/onBoard1.png')}
-        resizeMode="contain"
-        style={{ flex: 1, justifyContent: 'flex-end' }}>
-        <View
-          style={{
-            height: 250,
-            width: '100%',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: 'orange',
-            borderTopEndRadius: 40,
-            borderTopStartRadius: 40,
-            padding: 20,
-          }}>
-          <TouchableOpacity
-            style={{
-              backgroundColor: 'purple',
-              width: '100%',
-              alignItems: 'center',
-              padding: 10,
-              borderRadius: 20,
-            }}>
-            <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 25 }}>Get Started!</Text>
-          </TouchableOpacity>
-        </View>
-      </ImageBackground>
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="OnBoard" screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="OnBoard" component={OnBoard} />
+        <Stack.Screen name="OnBoard1" component={OnBoard1} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
+
+registerRootComponent(Index);
