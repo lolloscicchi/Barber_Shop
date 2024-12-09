@@ -4,15 +4,18 @@ import { useFonts } from 'expo-font';
 
 import { fonts, fontStyles } from '@/app/fonts';
 import BigButton from '@/components/atoms/bigButton/bigButton.atom';
+import { NavigationProp } from '@react-navigation/core';
 
 interface OnBoardContainerProps {
   titles: string[];
   descriptions: string[];
   switchView: number;
   onSelectView: (index: number) => void;
+  onPress: () => void;
 }
 
 const OnBoardContainer = ({
+  onPress,
   titles,
   descriptions,
   switchView,
@@ -73,7 +76,7 @@ const OnBoardContainer = ({
           />
         </View>
         <View style={{ height: 18 }} />
-        <BigButton title={'Get started!'} onPress={() => {}} />
+        <BigButton title={'Get started!'} onPress={onPress} />
       </View>
     );
   }

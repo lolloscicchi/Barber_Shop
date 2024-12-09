@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import OnBoard from '@/app/screens/onBoard/onBoard';
 import LandingPage from '@/app/screens/landingPage';
+import HomePage from '@/app/screens/home/homePage';
 
 export default function Index() {
   const Stack = createNativeStackNavigator();
@@ -14,6 +15,7 @@ export default function Index() {
       <Stack.Navigator initialRouteName="LandingPage" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="LandingPage" component={LandingPage} />
         <Stack.Screen name="OnBoard" component={OnBoard} />
+        <Stack.Screen name="HomePage" component={HomePage} />
       </Stack.Navigator>
     </NavigationContainer>
   );

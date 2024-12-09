@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 import OnBoardContainer from '@/components/molecules/onBoardContainer/onBoardContainer.molecule';
 import { useState } from 'react';
 
-export default function OnBoard() {
+export default function OnBoard({ navigation }) {
   // testi dei titoli e delle descrizioni da renderizzare alla pressione dei pulsanti
   const titles = ['Welcome Gobars', 'Loooking for barber?', 'Everything in your hands'];
   const descriptions = [
@@ -26,6 +26,7 @@ export default function OnBoard() {
         style={{ flex: 1, justifyContent: 'flex-end' }}>
         {/*l'unico contenitore della schermata, ovvero quello arancione*/}
         <OnBoardContainer
+          onPress={() => navigation.navigate('HomePage')}
           titles={titles}
           descriptions={descriptions}
           switchView={selectedIndex}
