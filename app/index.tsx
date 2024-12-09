@@ -3,17 +3,17 @@ import { registerRootComponent } from 'expo';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import OnBoard1 from '@/app/screens/onBoard/onBoard1';
 import OnBoard from '@/app/screens/onBoard/onBoard';
+import LandingPage from '@/app/screens/landingPage';
 
 export default function Index() {
   const Stack = createNativeStackNavigator();
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="OnBoard" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="LandingPage" screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="LandingPage" component={LandingPage} />
         <Stack.Screen name="OnBoard" component={OnBoard} />
-        <Stack.Screen name="OnBoard1" component={OnBoard1} />
       </Stack.Navigator>
     </NavigationContainer>
   );
