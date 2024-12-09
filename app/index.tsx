@@ -3,8 +3,8 @@ import { registerRootComponent } from 'expo';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import OnBoard1 from '@/app/screens/onBoard1';
-import OnBoard from '@/app/screens/onBoard';
+import OnBoard1 from '@/app/screens/onBoard/onBoard1';
+import OnBoard from '@/app/screens/onBoard/onBoard';
 
 export default function Index() {
   const Stack = createNativeStackNavigator();
