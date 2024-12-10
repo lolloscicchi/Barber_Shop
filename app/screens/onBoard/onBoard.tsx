@@ -26,7 +26,7 @@ export default function OnBoard({ navigation }) {
         style={{ flex: 1, justifyContent: 'flex-end' }}>
         {/*l'unico contenitore della schermata, ovvero quello arancione*/}
         <OnBoardContainer
-          onPress={() => navigation.navigate('HomePage')}
+          onPress={() => navigation.navigate('Login')}
           titles={titles}
           descriptions={descriptions}
           switchView={selectedIndex}
