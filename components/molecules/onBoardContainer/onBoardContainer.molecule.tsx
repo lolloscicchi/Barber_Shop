@@ -1,10 +1,11 @@
-import { Pressable, Text, TouchableOpacity, View } from 'react-native';
-import { memo, useState } from 'react';
+import { Text, View } from 'react-native';
+import { memo } from 'react';
 import { useFonts } from 'expo-font';
 
-import { fonts, fontStyles } from '@/app/fonts';
+import { fonts, fontStyles } from '@/assets/fonts/fonts';
 import BigButton from '@/components/atoms/bigButton/bigButton.atom';
 import { NavigationProp } from '@react-navigation/core';
+import OnBoardSmallButton from '@/components/atoms/onBoardSmallButton/onBoardSmallButton.atom';
 
 interface OnBoardContainerProps {
   titles: string[];
@@ -46,34 +47,9 @@ const OnBoardContainer = ({
           </Text>
         </View>
         <View style={{ flexDirection: 'row' }}>
-          <Pressable
-            style={{
-              backgroundColor: switchView === 0 ? '#363062' : 'white',
-              width: switchView === 0 ? 28 : 10,
-              height: 10,
-              borderRadius: 10,
-            }}
-            onPress={() => onSelectView(0)}
-          />
-          <Pressable
-            style={{
-              backgroundColor: switchView === 1 ? '#363062' : 'white',
-              width: switchView === 1 ? 28 : 10,
-              height: 10,
-              borderRadius: 10,
-              marginHorizontal: 8,
-            }}
-            onPress={() => onSelectView(1)}
-          />
-          <Pressable
-            style={{
-              backgroundColor: switchView === 2 ? '#363062' : 'white',
-              width: switchView === 2 ? 28 : 10,
-              height: 10,
-              borderRadius: 10,
-            }}
-            onPress={() => onSelectView(2)}
-          />
+          <OnBoardSmallButton isPressed={switchView === 0} onPress={() => onSelectView(0)} />
+          <OnBoardSmallButton isPressed={switchView === 1} onPress={() => onSelectView(1)} />
+          <OnBoardSmallButton isPressed={switchView === 2} onPress={() => onSelectView(2)} />
         </View>
         <View style={{ height: 18 }} />
         <BigButton title={'Get started!'} onPress={onPress} />
