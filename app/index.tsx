@@ -3,10 +3,11 @@ import { registerRootComponent } from 'expo';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import OnBoard from '@/app/screens/onBoard/onBoard';
+import OnBoardScreen from '@/app/screens/onBoard/onBoard.screen';
 import LandingPage from '@/app/screens/landingPage';
-import HomePage from '@/app/screens/home/homePage';
-import Login from '@/app/screens/login/login'
+import HomePage from '@/app/screens/home/homePage.screen';
+import Login from '@/app/screens/login/login.screen';
+import OnBoard from '@/app/screens/onBoard/onBoard.screen';
 
 export default function Index() {
   const Stack = createNativeStackNavigator();
