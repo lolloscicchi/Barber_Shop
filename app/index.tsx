@@ -14,7 +14,7 @@ export default function Index() {
   const Stack = createNativeStackNavigator();
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor:'#F99417' }}>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="LandingPage" screenOptions={{ headerShown: false }}>
           <Stack.Screen name="LandingPage" component={LandingPage} />

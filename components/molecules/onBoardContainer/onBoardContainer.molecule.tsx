@@ -32,7 +32,7 @@ const OnBoardContainer = ({
           width: '100%',
           alignItems: 'center',
           justifyContent: 'space-between',
-          backgroundColor: 'orange',
+          backgroundColor: '#F99417',
           borderTopEndRadius: 40,
           borderTopStartRadius: 40,
           paddingHorizontal: 20,

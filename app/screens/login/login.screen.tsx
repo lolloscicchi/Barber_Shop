@@ -4,7 +4,6 @@ import { styles } from '@/app/screens/login/login.styles';
 
 export default function Login() {
   return (
-    <View style={styles.container}>
       <ImageBackground
         style={{
           backgroundColor: '#F99417',
@@ -16,13 +15,12 @@ export default function Login() {
         source={require('@/assets/images/appImages/background/backgroundIcons.png')}
         resizeMode="cover">
         <Image
-          style={{ flex: 1, marginTop: '20%' }}
+          style={{ flex:1 }}
           source={require('@/assets/images/appImages/login/loginBarber.png')}
         />
         <View style={{ flex: 2, backgroundColor: 'white', width: '100%' }}>
           <Text>LOGIN</Text>
         </View>
       </ImageBackground>
-    </View>
   );
 }
