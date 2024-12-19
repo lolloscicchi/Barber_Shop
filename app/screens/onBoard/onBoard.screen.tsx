@@ -21,7 +21,7 @@ export default function OnBoard({ navigation }) {
     require('../../../assets/images/appImages/onBoard/onBoard3.png'),
   ];
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <ImageBackground
         source={onBoardImages[selectedIndex]}
         resizeMode="contain"
@@ -35,6 +35,6 @@ export default function OnBoard({ navigation }) {
           onSelectView={setSelectedIndex}
         />
       </ImageBackground>
-    </SafeAreaView>
+    </View>
   );
 }

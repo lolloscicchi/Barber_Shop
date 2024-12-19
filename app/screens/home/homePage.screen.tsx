@@ -3,7 +3,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function HomePage() {
   return (
-    <SafeAreaProvider>
+    <View>
       <View
         style={{
           backgroundColor: '#363062',
@@ -13,6 +13,6 @@ export default function HomePage() {
         }}>
         <Text>HOME PAGE</Text>
       </View>
-    </SafeAreaProvider>
+    </View>
   );
 }

@@ -8,19 +8,22 @@ import LandingPage from '@/app/screens/landingPage';
 import HomePage from '@/app/screens/home/homePage.screen';
 import Login from '@/app/screens/login/login.screen';
 import OnBoard from '@/app/screens/onBoard/onBoard.screen';
+import { SafeAreaView } from 'react-native';
 
 export default function Index() {
   const Stack = createNativeStackNavigator();
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="LandingPage" screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="LandingPage" component={LandingPage} />
-        <Stack.Screen name="OnBoard" component={OnBoard} />
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="HomePage" component={HomePage} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaView style={{ flex: 1 }}>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="LandingPage" screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="LandingPage" component={LandingPage} />
+          <Stack.Screen name="OnBoard" component={OnBoard} />
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="HomePage" component={HomePage} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaView>
   );
 }
 

@@ -4,7 +4,7 @@ import { styles } from '@/app/screens/login/login.styles';
 
 export default function Login() {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <ImageBackground
         style={{
           backgroundColor: '#F99417',
@@ -23,6 +23,6 @@ export default function Login() {
           <Text>LOGIN</Text>
         </View>
       </ImageBackground>
-    </SafeAreaView>
+    </View>
   );
 }
